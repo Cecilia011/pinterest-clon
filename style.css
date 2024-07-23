@@ -1,0 +1,198 @@
+/*Reseteador universal*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+header nav{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw;
+    height: 90px;
+    font-size: 16px;
+    /*hace que si agranamos a achicamos la pantalla, los elementos se acomoden automaticamente*/
+    position: fixed;
+    /*las imagenes siempre se mostraran en orden*/
+    z-index: 1;
+}
+
+#icono-pinterest{
+    /*ancho*/
+    width: 35px;
+    height: 35px;
+    padding: 4px;
+}
+
+#icono-pinterest:hover{
+    /*  EFECTO HOVER, SE MUESTRA UNA SOMBRA DETRAS DEL ICONO*/
+    background-color: #e9e9e9;
+    /*Radio del hover, cuanto se va a ver*/
+    border-radius: 150px;
+
+}
+
+.first-list{
+    display: flex;
+    list-style: none;
+}
+.first-list li{
+    padding: 0px 12px;  
+}
+
+.first-list a{
+    text-decoration: none;
+    color: black;
+}
+
+#inicio {
+    background-color: black;
+    color: white;
+    padding: 14px 12px;
+    /*hacerlo en forma de ovalo*/
+    border-radius: 25px;
+}
+
+.search {
+    flex-grow: 1px;
+    height: 48px;
+    background-color: #e9e9e9;
+    border-radius: 30px;
+}
+
+.search:hover{
+    background-color: #e1e1e1;
+}
+
+.search:focus-within{
+    border: 3px solid #7fc1ff;
+}
+
+#lupa{
+    padding: 13px;
+    color: #767676;
+    /*para cambiar l ancho de l alupa, ya que al ser de google fonts lo lee como una font*/
+    font-weight: bolder;
+}
+
+.barra input {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    padding: 0px 8px 0px 0px;
+    font-size: 16px;
+    flex-grow: 1;
+    width: 600px; /* Establece el ancho deseado en píxeles */
+}
+
+/*Iconos derecha*/
+
+.right-items span{
+    padding: 8px;
+    color: #767676;
+    font-size: 28px;
+}
+
+.right-items span:hover{
+    background-color: #e1e1e1;
+    border-radius: 150px;
+    /*cambia el cursor a la manita*/
+    cursor: pointer;
+}
+
+/*Estilos Main*/
+.contenido{
+    position: absolute;
+    margin-top: 80px;
+
+}
+
+.imagenes{
+    columns: 5 240px;
+    margin: auto;
+}
+
+.card-image{
+    position: relative;
+    padding: 6px;
+}
+
+.card-image img{
+    /*para que no esten cuadradas*/
+    border-radius: 15px;
+    /*minímo de ancho*/
+    min-width: 240px;
+    max-width: 240px;
+
+}
+
+/*filtro al pasar el cursor*/
+.card-image:hover > :first-child{
+    filter: brightness(65%);
+}
+
+.card-image:hover > *{
+visibility: visible;
+display: inline;
+
+}
+
+.button{
+    position: absolute;
+    left: 57%;
+    top: 5%;
+    padding: 13px 15px;
+    background-color: #e60023;
+    border-radius: 30px;
+    border: none;
+    visibility: hidden;
+}
+
+.card-image button a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    /*el grosor de la letra*/
+    font-weight: bold;
+}
+
+.oculto1{
+    position: absolute;
+    left: 48%;
+    bottom: 8%;
+    background-color: white;
+    /*el icono se sigue tratando como letra*/
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4%;
+    visibility: hidden;
+    display: none;
+
+}
+
+.oculto2{
+    position: absolute;
+    left: 70%;
+    bottom: 8%;
+    background-color: white;
+    /*el icono se sigue tratando como letra*/
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4%;
+    visibility: hidden;
+    display: none;
+    
+}
